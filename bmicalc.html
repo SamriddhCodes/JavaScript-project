@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="bmicalc.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" placeholder="Enter weight (IN KG)" id="a">
+    <input type="text" placeholder="Enter height (IN M)" id="b">
+    <button onclick="bmi()"> CHECK BMI </button><br><br>
+    
+    <script>
+        function bmi(){
+    var a=document.getElementById("a").value;
+    var b=document.getElementById("b").value;
+    var bmi=a/(b*b)*10000;
+    document.writeln("Your bmi is: "+bmi+"<br>");
+    
+    if(bmi<=18){
+        document.writeln("Person is underweight");
+
+    }
+    else if (bmi<=25){
+        document.writeln("Person is normal weight");
+
+    }
+    else if(bmi<=30){
+        document.writeln("Person is overweight");
+    }
+    else if (bmi<=40){
+        document.writeln("Person is obese");
+
+    }
+    else{
+        document.writeln("Person is severly obese");
+    }
+
+}
+       
+     </script>
+    
+</body>
+</html>
